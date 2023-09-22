@@ -42,9 +42,11 @@ class SecondFragment:Fragment() {
 
     override fun onStart() {
         super.onStart()
+        binding.textView1.text=""
         Toast.makeText(requireActivity(),TAG.plus(" onStart executed"), Toast.LENGTH_SHORT).show()
         if (life_circle_array != null) {
             life_circle_array.forEach {
+                Log.e(TAG,"each:: $it")
                 //binding.textView1.text= data?.get(1) ?: "nothing"
                 binding.textView1.text= binding.textView1.text.toString() + "\n"+it
             }

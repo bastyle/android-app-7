@@ -1,6 +1,7 @@
 package ca.centennial.comp304.bastian.bastias.comp304lab1_2
 
 import android.R
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -47,10 +48,14 @@ class FirstFragment:Fragment(ca.centennial.comp304.bastian.bastias.comp304lab1_2
         binding.listView.onItemClickListener = AdapterView.OnItemClickListener { adapterView, view, position, id ->
             val selectedItem = adapterView.getItemAtPosition(position) as String
             val itemIdAtPos = adapterView.getItemIdAtPosition(position)
-
-
-            Toast.makeText(requireContext(),"click item $selectedItem its position $itemIdAtPos",Toast.LENGTH_SHORT).show()
+            //Toast.makeText(requireContext(),"click item $selectedItem its position $itemIdAtPos",Toast.LENGTH_SHORT).show()
+            if(itemIdAtPos==0L){
+                val intent = Intent(requireContext(),AiActivity::class.java)
+                startActivity(intent)
+            }else if(itemIdAtPos==1L){
+                val intent = Intent(requireContext(),VrActivity::class.java)
+                startActivity(intent)
+            }
         }
-
     }
 }

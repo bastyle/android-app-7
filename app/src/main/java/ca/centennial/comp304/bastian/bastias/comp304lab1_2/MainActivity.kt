@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         public const val MESSAGES_KEY="LIFE_CIRCLE_MSG"
     }
     override fun onCreate(savedInstanceState: Bundle?) {
-        Log.e(TAG,"onCreate")
+        Log.e(TAG,"onCreate:::::")
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)

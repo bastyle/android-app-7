@@ -30,16 +30,15 @@ class FirstFragment:Fragment(ca.centennial.comp304.bastian.bastias.comp304lab1_2
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = ca.centennial.comp304.bastian.bastias.comp304lab1_2.databinding.FragmentFirstBinding.inflate(layoutInflater,container,false)
+        binding = FragmentFirstBinding.inflate(layoutInflater,container,false)
         return binding.root
     }
 
     override fun onStart() {
         super.onStart()
         Log.e(TAG, "onStart")
-        // Sample data
-        val items = arrayOf<String>("Item 1", "Item 2", "Item 3", "Item 4", "Item 5")
         val items2 = resources.getStringArray(ca.centennial.comp304.bastian.bastias.comp304lab1_2.R.array.activities)
+
         //Toast.makeText(requireContext(),getString(ca.centennial.comp304.bastian.bastias.comp304lab1_2.R.string.app_name),Toast.LENGTH_LONG).show()
         val adapter = ArrayAdapter<String>(requireContext(), android.R.layout.simple_list_item_single_choice, items2)
 

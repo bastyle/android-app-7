@@ -4,4 +4,7 @@
         <item value="1">AIActivity</item>
         <item value="2">VRActivity</item>
     </string-array>
+    <string name="second_fragment_title">Life Cycle Methods:</string>
+    <string name="life_circle_msg_key">LIFE_CIRCLE_MSG</string>
+
 </resources>

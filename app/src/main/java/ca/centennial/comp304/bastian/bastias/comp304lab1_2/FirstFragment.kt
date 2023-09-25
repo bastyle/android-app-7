@@ -45,6 +45,11 @@ class FirstFragment:Fragment(ca.centennial.comp304.bastian.bastias.comp304lab1_2
 
         binding.listView.adapter=adapter
         binding.listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE)
+        // This code snippet defines an OnItemClickListener for the ListView named listView
+        //Retrieves the selected item's text and its position in the ListView.
+        //Checks the position and, based on its value, launches a specific activity:
+        //If the position is 0, it launches the AiActivity.
+        //If the position is 1, it launches the VrActivity.
         binding.listView.onItemClickListener = AdapterView.OnItemClickListener { adapterView, view, position, id ->
             val selectedItem = adapterView.getItemAtPosition(position) as String
             val itemIdAtPos = adapterView.getItemIdAtPosition(position)

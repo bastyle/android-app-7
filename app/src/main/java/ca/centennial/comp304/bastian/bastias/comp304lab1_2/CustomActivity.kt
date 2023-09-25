@@ -4,6 +4,9 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
+/**
+ * open class CustomActivity to reuse the same functions for n Activities (AiActivity, VrActivity)
+ */
 open class CustomActivity:AppCompatActivity() {
 
     protected lateinit var textView: TextView

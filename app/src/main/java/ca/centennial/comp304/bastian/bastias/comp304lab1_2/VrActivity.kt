@@ -16,7 +16,9 @@ class VrActivity:CustomActivity() {
         Log.e(TAG,"onCreate")
         binding = ActivityVrBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        // set the textview referencing the super class CustomActivity
         super.textView = binding.textView
         super.onCreate(savedInstanceState)
     }
+    // methods on create, start, stop, destroy are called intrinsically using inheritance
 }

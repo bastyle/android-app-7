@@ -20,6 +20,7 @@ class AiActivity:CustomActivity() {
         super.onCreate(savedInstanceState)
         //super.addMessage("onCreate")
     }
+// methods on create, start, stop, destroy are called intrinsically using inheritance from the super class CustomActivity
 
     /*override fun onStart() {
         super.onStart()
